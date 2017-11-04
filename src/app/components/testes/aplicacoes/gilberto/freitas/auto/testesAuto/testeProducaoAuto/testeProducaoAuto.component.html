@@ -1,0 +1,23 @@
+<div class="spaceMenu">
+    <form>
+        <div> Login Core </div>
+        <div style="margin-bottom: 25px" class="input-group">
+            <input id="login-username-core" type="text" #usuarioCore class="form-control" name="username" value="" placeholder="Usuário">
+        </div>
+        <div style="margin-bottom: 25px" class="input-group">
+            <input id="login-password-core" type="password" #senhaCore class="form-control" name="password" placeholder="Senha">
+        </div>
+        <br>
+        <br>
+        <div> Login Portal </div>
+        <div style="margin-bottom: 25px" class="input-group">
+            <input id="login-username-portal" type="text" #usuarioPortal class="form-control" name="username" value="" placeholder="Usuário">
+        </div>
+        <div style="margin-bottom: 25px" class="input-group">
+            <input id="login-password-portal" type="password" #senhaPortal class="form-control" name="password" placeholder="Senha">
+        </div>
+        <button type="button" (click)="dadosTeste(usuarioCore.value, senhaCore.value, usuarioPortal.value, senhaPortal.value)" >
+        teste
+    </button>
+    </form>
+</div>

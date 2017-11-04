@@ -1,0 +1,41 @@
+<div class="container spaceMenu">
+  <h2> Testes Freitas Auto</h2>
+  <div class="border">
+    <ul>
+      <li class="col-md-4">
+        <a routerLink="/aplicacoes/gilberto/freitas/auto/testeProducaoAuto" routerLinkActive="active"> Teste Produção
+          Auto </a>
+      </li>
+      <li class="col-md-4">
+        <a routerLink="/aplicacoes/gilberto/freitas/auto/geradorProposta" routerLinkActive="active"
+           (click)="setTipoTeste('Gerador Proposta')" (click)="setNomeDownloadArquivo('Gerador Proposta')"> Gerador de
+          proposta </a>
+      </li>
+      <li class="col-md-4">
+        <a routerLink="/aplicacoes/gilberto/freitas/auto/testeRegressao" routerLinkActive="active"
+           (click)="setTipoTeste('Teste Regressao')" (click)="setNomeDownloadArquivo('Cenarios Regressao')"> Teste de
+          Regressao </a>
+      </li>
+      <li class="col-md-4">
+        <a routerLink="/aplicacoes/gilberto/freitas/auto/testeFormalizacao" routerLinkActive="active"
+           (click)="setTipoTeste('Teste Formalizaçao')" (click)="setNomeDownloadArquivo('Cenarios Regressao')"> Teste de
+          Formalizacao </a>
+      </li>
+      <li class="col-md-4">
+        <a routerLink="/aplicacoes/gilberto/freitas/auto/dadosComplementar" routerLinkActive="active"
+           (click)="setTipoTeste('Dados Complementar')" (click)="setNomeDownloadArquivo('Dados Complementar')"> Dados
+          Complementar </a>
+      </li>
+      <li class="col-md-4">
+        <a routerLink="/aplicacoes/gilberto/freitas/auto/analiseDocumentalTeste" routerLinkActive="active"
+           (click)="setTipoTeste('Analise Documental Teste')" (click)="setNomeDownloadArquivo('Analise Documental')">
+          Analise Documental Teste </a>
+      </li>
+      <li class="col-md-4">
+        <a routerLink="/aplicacoes/gilberto/freitas/auto/ajusteDocumentos" routerLinkActive="active"
+           (click)="setTipoTeste('Ajuste Documentos')" (click)="setNomeDownloadArquivo('Ajuste Documentos')"> Ajuste
+          Documentos </a>
+      </li>
+    </ul>
+  </div>
+</div>

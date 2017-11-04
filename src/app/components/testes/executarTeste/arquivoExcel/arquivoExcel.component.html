@@ -1,0 +1,15 @@
+<div>
+    <div class="input-group comMargem">
+        <label class="input-group-btn">
+        <span class="btn btn-primary">
+            Browse&hellip; <input type="file" style="display: none;" id="myFile" #planilhaExcel accept="application/vnd.ms-excel" (change)="changeListener($event)" multiple required>
+</span>
+</label>
+<input type="text" class="form-control" readonly value="{{nameFile}}">
+</div>
+<div class="input-group comMargem">
+    <label class="input-group-btn">
+        <button class="btn btn-lg btn-primary btn-block" type="button" (click)="downloadFile()"> Download Arquivo </button>
+    </label>
+</div>
+</div>

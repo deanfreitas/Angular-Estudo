@@ -1,0 +1,43 @@
+<div>
+    <table class="table table-striped spaceMenu">
+        <caption>
+            <h2>Historico</h2>
+        </caption>
+        <thead>
+            <tr>
+                <th>Cliente</th>
+                <th>Teste</th>
+                <th>Dia/Mês/Ano</th>
+                <th>Hora</th>
+                <th>Status</th>
+                <th>evidencias</th>
+            </tr>
+            <tr>
+                <th><input [(ngModel)]="filtroCliente" /></th>
+                <th><input [(ngModel)]="filtroTeste" /></th>
+                <th><input [(ngModel)]="filtroDia" /></th>
+                <th><input [(ngModel)]="filtroHora" /></th>
+                <th><input [(ngModel)]="filtroStatus" /></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let historico of historicos | filtroHistoricoCliente:filtroCliente | 
+                 filtroHistoricoTeste:filtroTeste | filtroHistoricoDia:filtroDia |
+                 filtroHistoricoHora:filtroHora | filtroHistoricoStatus:filtroStatus 
+                 | paginate: { itemsPerPage: numero, currentPage: p }">
+                <td> {{historico.cliente}} </td>
+                <td> {{historico.teste}} </td>
+                <td> {{historico.dia}} </td>
+                <td> {{historico.hora}} </td>
+                <td> {{historico.status}} </td>
+                <td><button>Download</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <pagination-controls class="elementLeft" (pageChange)="p = $event" #api></pagination-controls>
+        <select class="elementRight" #numeroPaginacao (change)="numero = numeroPaginacao.value">
+            <option *ngFor="let numeroPaginacao of numerosPaginacao" [value]="numeroPaginacao">{{numeroPaginacao}}</option>
+        </select>
+    </div>
+</div>

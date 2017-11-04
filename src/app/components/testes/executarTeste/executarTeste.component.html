@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="wrapper">
+    <form class="form-signin">
+      <h2 class="form-signin-heading">{{teste}}</h2>
+      <div>
+        <select class="form-control" #ambiente required>
+          <option *ngFor="let ambiente of ambientes" [value]="ambiente">{{ambiente}}</option>
+        </select>
+        <input type="text" class="form-control" type="text" #usuarioSistema name="username" placeholder="Usuário"
+               required="" autofocus=""
+        />
+        <input type="password" class="form-control" type="password" #senhaSistema name="password" placeholder="Senha"
+               required=""
+        />
+        <router-outlet></router-outlet>
+        <button class="btn btn-lg btn-primary btn-block" type="button"
+                (click)="dadosTeste(ambiente.value, usuarioSistema.value, senhaSistema.value)">Realizar Teste
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
